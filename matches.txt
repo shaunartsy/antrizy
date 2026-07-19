@@ -1,0 +1,41 @@
+url("https://static.wixstatic.com/ufonts/d26002_2
+url("https://static.wixstatic.com/ufonts/d26002_2
+url("https://static.wixstatic.com/ufonts/d26002_2
+url("https://static.wixstatic.com/ufonts/d9172a_d
+url("https://static.wixstatic.com/ufonts/d9172a_d
+url("https://static.wixstatic.com/ufonts/d9172a_d
+url("https://static.wixstatic.com/ufonts/d26002_2
+url("https://static.wixstatic.com/ufonts/d26002_2
+url("https://static.wixstatic.com/ufonts/d26002_2
+url("https://static.wixstatic.com/ufonts/d26002_c
+url("https://static.wixstatic.com/ufonts/d26002_c
+url("https://static.wixstatic.com/ufonts/d26002_c
+url("https://static.wixstatic.com/ufonts/d9172a_d
+url("https://static.wixstatic.com/ufonts/d9172a_d
+url("https://static.wixstatic.com/ufonts/d9172a_d
+":"https:\/\/static.wixstatic.com\/media","mediaR
+":"https:\/\/static.wixstatic.com\/","staticVideo
+l":"https:\/\/video.wixstatic.com\/","userDomainM
+":"https:\/\/static.wixstatic.com","scriptsUrl":"
+":"https:\/\/static.wixstatic.com\/media","static
+---
+c = 'https://static.parastorage.com/unpkg/@formatjs
+ src: url('//static.parastorage.com/fonts/v2/2af1bf
+ src: url('//static.parastorage.com/fonts/v2/2af1bf
+ src: url('//static.parastorage.com/fonts/v2/2af1bf
+ src: url('//static.parastorage.com/fonts/v2/2af1bf
+ src: url('//static.parastorage.com/fonts/v2/2af1bf
+ src: url('//static.parastorage.com/fonts/v2/2af1bf
+":"https:\/\/static.parastorage.com\/services\/edit
+":"https:\/\/static.parastorage.com\/services\/edit
+":"https:\/\/static.parastorage.com\/services\/sant
+:["https:\/\/static.parastorage.com\/services\/font
+","https:\/\/static.parastorage.com\/services\/font
+","https:\/\/static.parastorage.com\/services\/font
+":"https:\/\/static.parastorage.com\/services\/book
+":"https:\/\/static.parastorage.com\/services\/book
+":"https:\/\/static.parastorage.com\/services\/book
+":"https:\/\/static.parastorage.com\/services\/book
+":"https:\/\/static.parastorage.com\/services\/book
+":"https:\/\/static.parastorage.com\/services\/book
+":"https:\/\/static.parastorage.com\/services\/book
