@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" style="">
   <head>
     <meta charset="utf-8" />
@@ -452,7 +452,7 @@
         margin-top: calc(var(--blocked-site-scroll-margin-top) * -1);
       }
       #site-root {
-        top: var(--wix-ads-height);
+        top: 0px;
         min-height: 100%;
         margin: 0 auto;
         position: relative;
@@ -1516,8 +1516,8 @@
       }
       ._7xVID {
         position: var(--bg-position);
-        top: var(--wix-ads-height);
-        min-height: calc(100vh - var(--wix-ads-height));
+        top: 0px;
+        min-height: 100vh;
         width: 100%;
         height: 100%;
         min-width: var(--site-width);
@@ -2825,8 +2825,8 @@
       }
       .QED8q1 {
         width: 100%;
-        height: calc(100% - var(--wix-ads-height));
-        margin-top: var(--wix-ads-height);
+        height: 100%;
+        margin-top: 0px;
         pointer-events: none;
         z-index: var(
           --pinned-layer-in-container,
@@ -4472,9 +4472,9 @@
         --color_63: 255, 255, 255;
         --color_64: 134, 145, 182;
         --color_65: 134, 145, 182;
-        --wix-ads-height: 50px;
-        --sticky-offset: 50px;
-        --wix-ads-top-height: 50px;
+        --wix-ads-height: 0px;
+        --sticky-offset: 0px;
+        --wix-ads-top-height: 0px;
         --site-width: 980px;
         --above-all-z-index: 100000;
         --portals-z-index: 100001;
@@ -5811,7 +5811,7 @@
         --bg-gradient: none;
         --shc-mutated-brightness: 128, 128, 128;
         position: sticky !important;
-        top: var(--wix-ads-height);
+        top: 0px;
       }
       #comp-lpfq9x76 {
         --contentPaddingLeft: 0px;
@@ -7669,6 +7669,29 @@
           0 800px 0 0 rgb(12, 35, 109),
           0 900px 0 0 rgb(12, 35, 109),
           0 1000px 0 0 rgb(12, 35, 109) !important;
+      }
+    </style>
+    <style id="HEADER_TOP_FIX">
+      :root {
+        --wix-ads-height: 0px !important;
+        --sticky-offset: 0px !important;
+        --wix-ads-top-height: 0px !important;
+      }
+
+      #site-root {
+        top: 0 !important;
+      }
+
+      #SITE_HEADER {
+        top: 0 !important;
+      }
+
+      ._7xVID {
+        top: 0 !important;
+      }
+
+      .QED8q1 {
+        margin-top: 0 !important;
       }
     </style>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
