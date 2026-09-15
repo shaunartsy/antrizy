@@ -752,10 +752,7 @@
     }
   </style>
 
-  <meta http-equiv="X-Wix-Meta-Site-Id" content="b68972b9-ed4d-4cc2-9712-90f522a0ac73" />
-  <meta http-equiv="X-Wix-Application-Instance-Id" content="12315d51-e679-4ea5-b88f-4b107f432df7" />
 
-  <meta http-equiv="X-Wix-Published-Version" content="349" />
 
   <meta http-equiv="etag" content="bug" />
 
@@ -9408,6 +9405,50 @@
         0 1000px 0 0 rgb(12, 35, 109) !important;
     }
 
+    /* ── STEP 2 DESKTOP POLISH ────────────────────────────
+       Keep "GET A QUOTE" inside the viewport. Wix positions it at
+       left:1082px inside a 980px canvas, so its right edge lands at
+       canvas+1215px and is clipped on any viewport under ~1460px
+       (the live site clips it too). Anchor it to the header's right
+       edge instead so it scales cleanly from 1024px upward. */
+    [data-mesh-id="SITE_HEADERinlineContent-gridContainer"]>[id="comp-lqyfp3la"],
+    [data-mesh-id="SITE_HEADERinlineContent-gridContainer"]>interact-element>[id="comp-lqyfp3la"] {
+      left: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 30px !important;
+      justify-self: end !important;
+    }
+
+
+    /* ── Hero slideshow (#comp-lpfqhsk2) ──────────────────
+       All three slides are position:absolute/100%x100%, so without a
+       JS driver the last one in DOM order paints on top. Drive them off
+       an explicit active class instead; animations.js moves the class.
+       Timing mirrors Wix: --transition-duration 1000ms, same easing. */
+    #comp-lpfqhsk2 [data-testid="slidesWrapper"]>div {
+      transform: translateX(100%);
+      transition: transform var(--transition-duration, 1000ms) cubic-bezier(0.87, 0, 0.13, 1);
+    }
+
+    #comp-lpfqhsk2 [data-testid="slidesWrapper"]>div.az-slide-active {
+      transform: translateX(0);
+    }
+
+    #comp-lpfqhsk2 [data-testid="slidesWrapper"]>div.az-slide-prev {
+      transform: translateX(-100%);
+    }
+
+    /* Dots are real <a href> anchors; JS intercepts them. Give them a
+       visible affordance and a proper touch target. */
+    #comp-lpfqhsk2 nav[aria-label="Slides"] a {
+      cursor: pointer;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #comp-lpfqhsk2 [data-testid="slidesWrapper"]>div {
+        transition: none;
+      }
+    }
     /* ========================================================
          MOBILE RESPONSIVE OVERRIDES
          ======================================================== */
@@ -9794,6 +9835,7 @@
         height: 96px !important;
         left: 0 !important;
         margin: 0 auto !important;
+        position: static !important;
         justify-self: center !important;
       }
       
@@ -10756,6 +10798,28 @@
                                             role="region" tabindex="-1" aria-label="Slideshow">
                                             <div data-testid="shadowLayer" class="_3HZQOz"></div>
                                             <div data-testid="slidesWrapper" aria-live="off" class="LzcnsT">
+                                              <div id="comp-lpfqhslu" class="comp-lpfqhslu vSDtlj az-slide-active">
+                                                <div id="bgLayers_comp-lpfqhslu" data-hook="bgLayers"
+                                                  data-motion-part="BG_LAYER comp-lpfqhslu" class="QG9w8P axfISv">
+                                                  <div data-testid="colorUnderlay" class="LNYVZi ayCf9D"></div>
+                                                  <div id="bgMedia_comp-lpfqhslu" data-motion-part="BG_MEDIA comp-lpfqhslu" class="ROWgFb">
+                                                    <wow-image id="img_comp-lpfqhslu" class="Qh0lWW ayCf9D fO4mKs NgeJ4N bgImage"
+                                                      data-motion-part="BG_IMG comp-lpfqhslu" data-bg-effect-name="" data-has-ssr-src="true"><img
+                                                        src="./images/50c933_8ce0b2b396824e54a1f0d346274a842e_mv2.jpg"
+                                                        alt="shutterstock_1828958681.jpg" width="1169" height="796" style="
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                            object-position: 50% 50%;
+                                                          " data-ssr-src-done="true" fetchpriority="high" /></wow-image>
+                                                  </div>
+                                                </div>
+                                                <div class="thDjwm"></div>
+                                                <div data-mesh-id="comp-lpfqhsluinlineContent" data-testid="inline-content" class="">
+                                                  <div data-mesh-id="comp-lpfqhsluinlineContent-gridContainer"
+                                                    data-testid="mesh-container-content"></div>
+                                                </div>
+                                              </div>
                                               <div id="comp-lpfqhsmc" class="comp-lpfqhsmc vSDtlj">
                                                 <div id="bgLayers_comp-lpfqhsmc" data-hook="bgLayers"
                                                   data-motion-part="BG_LAYER comp-lpfqhsmc" class="QG9w8P axfISv">
@@ -10781,15 +10845,39 @@
                                                   </div>
                                                 </div>
                                               </div>
+                                              <div id="comp-lpfqhsmk" class="comp-lpfqhsmk vSDtlj">
+                                                <div id="bgLayers_comp-lpfqhsmk" data-hook="bgLayers"
+                                                  data-motion-part="BG_LAYER comp-lpfqhsmk" class="QG9w8P axfISv">
+                                                  <div data-testid="colorUnderlay" class="LNYVZi ayCf9D"></div>
+                                                  <div id="bgMedia_comp-lpfqhsmk" data-motion-part="BG_MEDIA comp-lpfqhsmk" class="ROWgFb"></div>
+                                                </div>
+                                                <div class="thDjwm"></div>
+                                                <div data-mesh-id="comp-lpfqhsmkinlineContent" data-testid="inline-content" class="">
+                                                  <div data-mesh-id="comp-lpfqhsmkinlineContent-gridContainer"
+                                                    data-testid="mesh-container-content">
+                                                    <div id="comp-lpfqhsmq" class="W4V2qg comp-lpfqhsmq wixui-image">
+                                                      <div data-testid="linkElement" class="apPOZK">
+                                                        <img loading="lazy" sizes="1133px" id="img_comp-lpfqhsmq"
+                                                          src="./images/1634552_P305JI0.jpg"
+                                                          alt="Office Furniture" class="gRkIq0 sFiSiq" width="1133" height="813"
+                                                          style="
+                                                              object-fit: cover;
+                                                              object-position: 50% 0%;
+                                                            " />
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
                                             </div>
                                             <nav aria-label="Slides" class="hImYkx">
                                               <ol class="RLaZ7p">
-                                                <li>
-                                                  <a href="./#comp-lpfqhslu" aria-label="Slide  1" class="v1smN8"></a>
-                                                </li>
                                                 <li aria-current="true">
-                                                  <a href="./#comp-lpfqhsmc" aria-label="Slide  2"
+                                                  <a href="./#comp-lpfqhslu" aria-label="Slide  1"
                                                     class="v1smN8 JPnvZO"></a>
+                                                </li>
+                                                <li>
+                                                  <a href="./#comp-lpfqhsmc" aria-label="Slide  2" class="v1smN8"></a>
                                                 </li>
                                                 <li>
                                                   <a href="./#comp-lpfqhsmk" aria-label="Slide  3" class="v1smN8"></a>
@@ -11877,7 +11965,7 @@
                                       <div id="comp-lps1s1nt" class="W4V2qg comp-lps1s1nt wixui-image">
                                         <div data-testid="linkElement" class="apPOZK">
                                           <img loading="lazy" sizes="460px" id="img_comp-lps1s1nt"
-                                            src="./images/pngegg (3)_edited.jpg" alt="Office stationary"
+                                            src="./images/pngegg (1).png" alt="Office stationary"
                                             style="object-fit: cover" class="gRkIq0 sFiSiq" width="460" height="420" />
                                         </div>
                                       </div>
@@ -12087,7 +12175,7 @@
                                               </div>
                                             </div>
                                           </section>
-                                          <div id="comp-lpbvw9931" class="W4V2qg comp-lpbvw9931 wixui-image" style="width: 81px !important; height: 96px !important; margin: 0 auto !important; position: static !important; justify-self: center !important;">
+                                          <div id="comp-lpbvw9931" class="W4V2qg comp-lpbvw9931 wixui-image">
                                             <div data-testid="linkElement" class="apPOZK" style="width: 100%; height: 100%;">
                                               <img loading="lazy" sizes="81px" id="img_comp-lpbvw9931"
                                                 src="./images/Client_6.png" alt="Company value 1" style="
@@ -12130,7 +12218,7 @@
                                                     market.</span></span></span>
                                             </p>
                                           </div>
-                                          <div id="comp-lpbvw9941" class="W4V2qg comp-lpbvw9941 wixui-image" style="width: 81px !important; height: 96px !important; margin: 0 auto !important; position: static !important; justify-self: center !important;">
+                                          <div id="comp-lpbvw9941" class="W4V2qg comp-lpbvw9941 wixui-image">
                                             <div data-testid="linkElement" class="apPOZK" style="width: 100%; height: 100%;">
                                               <img loading="lazy" sizes="81px" id="img_comp-lpbvw9941"
                                                 src="./images/Client_4.png" alt="Company value 2" style="
@@ -12172,7 +12260,7 @@
                                                     clients.</span></span></span>
                                             </p>
                                           </div>
-                                          <div id="comp-lpbvw9952" class="W4V2qg comp-lpbvw9952 wixui-image" style="width: 81px !important; height: 94px !important; margin: 0 auto !important; position: static !important; justify-self: center !important;">
+                                          <div id="comp-lpbvw9952" class="W4V2qg comp-lpbvw9952 wixui-image">
                                             <div data-testid="linkElement" class="apPOZK" style="width: 100%; height: 100%;">
                                               <img loading="lazy" sizes="81px" id="img_comp-lpbvw9952"
                                                 src="./images/Client_1.png" alt="Company value 3" style="
@@ -13728,54 +13816,29 @@
 
   <!-- Polyfills check -->
 
-  <!-- initCustomElements # 1-->
 
-  <!-- preloading pre-scripts -->
 
-  <!-- sentryOnLoad Setup Script -->
 
-  <!-- Sentry Loader Script -->
 
-  <!-- Sentry's makeMultiplexedTransport -->
 
-  <!-- Sentry's moduleMetadataIntegration -->
 
-  <!-- Add the rest of the ViewerModel -->
 
-  <!-- renderIndicator -->
 
-  <!-- versionIndicator -->
 
-  <!-- used platform apis start -->
 
-  <!-- used platform apis end -->
 
-  <!-- Business Manager -->
 
-  <!-- initCustomElements #2 -->
 
-  <!-- react -->
 
-  <!-- react-dom -->
 
-  <!-- lodash script -->
 
-  <!-- initial scripts -->
 
-  <!-- scriptTagsToPreload -->
 
-  <!-- Old Browsers Deprecation -->
 
-  <!-- bi -->
 
-  <!-- bi -->
-  <!-- warmup data start -->
 
-  <!-- warmup data end -->
 
-  <!-- presets polyfill -->
 
-  <!-- detect browser zoom -->
 </body>
 
 </html>
